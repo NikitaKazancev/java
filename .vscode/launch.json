@@ -14,7 +14,7 @@
 			"type": "java",
 			"name": "Launch Main",
 			"request": "launch",
-			"mainClass": "ПР3.EX2.Main",
+			"mainClass": "PW4.App",
 			"projectName": "Java_fdb0339"
 		}
 	]
