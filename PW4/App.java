@@ -5,105 +5,116 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class App extends JFrame {
-	Font fnt = new Font("Roboto", Font.BOLD, 20);
-	JButton btnMilan = new JButton("AC Milan");
-	JButton btnMadrid = new JButton("Real Madrid");
-	JLabel currentScore = new JLabel("Result: 0 X 0");
-	JLabel lastScorer = new JLabel("Last Scorer: N/A");
-	JLabel winner = new JLabel("Winner: DRAW");
 
-	int firstTeamScore = 0;
-	int secondTeamScore = 0;
+   Font fnt = new Font("Roboto", Font.BOLD, 20);
+   JButton btnMilan = new JButton("AC Milan");
+   JButton btnMadrid = new JButton("Real Madrid");
+   JLabel currentScore = new JLabel("Result: 0 X 0");
+   JLabel lastScorer = new JLabel("Last Scorer: N/A");
+   JLabel winner = new JLabel("Winner: DRAW");
 
-	App() {
-		super("App");
-		setLayout(new FlowLayout());
-		setSize(500, 100);
-		setVisible(true);
+   int firstTeamScore = 0;
+   int secondTeamScore = 0;
 
-		add(btnMilan);
-		btnMilan.addMouseListener(new MouseListener() {
-			@Override
-			public void mouseClicked(java.awt.event.MouseEvent e) {
-				firstTeamScore++;
-				currentScore.setText("Result: " + firstTeamScore + " X " + secondTeamScore);
-				lastScorer.setText("Last Scorer: AC Milan");
-				if (firstTeamScore > secondTeamScore) {
-					winner.setText("Winner: AC Milan");
-				} else if (firstTeamScore == secondTeamScore) {
-					winner.setText("Winner: DRAW");
-				}
-			}
+   App() {
+      super("App");
+      setLayout(new FlowLayout());
+      setSize(500, 100);
+      setVisible(true);
 
-			@Override
-			public void mousePressed(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+      add(btnMilan);
 
-			@Override
-			public void mouseReleased(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+      btnMilan.addMouseListener(
+         new MouseListener() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+               firstTeamScore++;
+               currentScore.setText(
+                  "Result: " + firstTeamScore + " X " + secondTeamScore
+               );
+               lastScorer.setText("Last Scorer: AC Milan");
+               if (firstTeamScore > secondTeamScore) {
+                  winner.setText("Winner: AC Milan");
+               } else if (firstTeamScore == secondTeamScore) {
+                  winner.setText("Winner: DRAW");
+               }
+            }
 
-			@Override
-			public void mouseEntered(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+            @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
 
-			@Override
-			public void mouseExited(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
+            }
 
-		btnMadrid.addMouseListener(new MouseListener() {
-			@Override
-			public void mouseClicked(java.awt.event.MouseEvent e) {
-				secondTeamScore++;
-				currentScore.setText("Result: " + firstTeamScore + " X " + secondTeamScore);
-				lastScorer.setText("Last Scorer: Real Madrid");
-				if (secondTeamScore > firstTeamScore) {
-					winner.setText("Winner: Real Madrid");
-				} else if (firstTeamScore == secondTeamScore) {
-					winner.setText("Winner: DRAW");
-				}
-			}
+            @Override
+            public void mouseReleased(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
 
-			@Override
-			public void mousePressed(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+            }
 
-			@Override
-			public void mouseReleased(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
 
-			@Override
-			public void mouseEntered(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+            }
 
-			@Override
-			public void mouseExited(java.awt.event.MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
 
-		add(btnMadrid);
-		add(currentScore);
-		add(lastScorer);
-		add(winner);
-	}
-	public static void main(String[] args) {
-		new App();
-	}
+            }
+         }
+      );
+
+      btnMadrid.addMouseListener(
+         new MouseListener() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+               secondTeamScore++;
+               currentScore.setText(
+                  "Result: " + firstTeamScore + " X " + secondTeamScore
+               );
+               lastScorer.setText("Last Scorer: Real Madrid");
+               if (secondTeamScore > firstTeamScore) {
+                  winner.setText("Winner: Real Madrid");
+               } else if (firstTeamScore == secondTeamScore) {
+                  winner.setText("Winner: DRAW");
+               }
+            }
+
+            @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseReleased(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+               // TODO Auto-generated method stub
+
+            }
+         }
+      );
+
+      add(btnMadrid);
+      add(currentScore);
+      add(lastScorer);
+      add(winner);
+   }
+
+   public static void main(String[] args) {
+      new App();
+   }
 }
