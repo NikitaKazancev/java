@@ -31,7 +31,8 @@ public class App {
          card1 = deck1.pop();
          card2 = deck2.pop();
          if (
-            (card1 > card2 || (card1 == 0 && card2 == 9)) && !(card1 == 9 && card2 == 0)
+            (card1 > card2 || (card1 == 0 && card2 == 9)) &&
+            !(card1 == 9 && card2 == 0)
          ) {
             extraDeck1.push(card1);
             extraDeck1.push(card2);
@@ -84,7 +85,8 @@ public class App {
          card1 = deck1.pop();
          card2 = deck2.pop();
          if (
-            (card1 > card2 || (card1 == 0 && card2 == 9)) && !(card1 == 9 && card2 == 0)
+            (card1 > card2 || (card1 == 0 && card2 == 9)) &&
+            !(card1 == 9 && card2 == 0)
          ) {
             deck1.addLast(card1);
             deck1.addLast(card2);
